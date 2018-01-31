@@ -88,3 +88,6 @@ installed.packages(fields = c("URL")) %>%
   pander()
 
 devtools::session_info()
+
+¯\_(ツ)_/¯
+
