@@ -1,7 +1,7 @@
 01\_explore-libraries\_spartan.R
 ================
 eric
-Wed Jan 31 14:37:08 2018
+Wed Jan 31 14:53:17 2018
 
 Which libraries does R search for packages? Installed packages
 
@@ -577,3 +577,7 @@ devtools::session_info()
     ##  withr        2.0.0      2017-07-28 CRAN (R 3.4.1)                 
     ##  xml2         1.1.1      2017-01-24 CRAN (R 3.4.0)                 
     ##  yaml         2.1.14     2016-11-12 CRAN (R 3.4.1)
+
+``` r
+# ¯\_(ツ)_/¯
+```

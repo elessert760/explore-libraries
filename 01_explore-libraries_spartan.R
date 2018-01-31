@@ -89,5 +89,5 @@ installed.packages(fields = c("URL")) %>%
 
 devtools::session_info()
 
-¯\_(ツ)_/¯
+# ¯\_(ツ)_/¯
 
