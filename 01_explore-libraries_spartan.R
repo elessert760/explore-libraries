@@ -9,7 +9,7 @@
 library(magrittr)
 library(tidyverse)
 installed.packages() %>% as_data_frame() %>% select(Package) %>% unique %>% nrow()
-installed.packages()
+# installed.packages()
 #' Exploring the packages
 
 ## count some things! inspiration
