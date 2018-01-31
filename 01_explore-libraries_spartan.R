@@ -6,10 +6,10 @@
 ## use installed.packages() to get all installed packages
 
 ## how many packages?
-
+library(magrittr)
+library(tidyverse)
 installed.packages() %>% as_data_frame() %>% select(Package) %>% unique %>% nrow()
-installed.packages() %>% View()
-
+installed.packages()
 #' Exploring the packages
 
 ## count some things! inspiration
@@ -71,6 +71,3 @@ installed.packages(fields = c("URL")) %>%
   count(github) %>% 
   mutate(Prop = n/sum(n))
 
-library(stringr)
-inst_pkg2 <- installed.packages(fields = c("LazyData", "Title", "Author")) %>% as_tibble()
-inst_pkg2 %>% count(str_detect(Author, 'Hadley')) %>% mutate(prop = n / sum(n))
