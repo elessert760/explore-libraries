@@ -68,7 +68,7 @@ installed.packages() %>%
 ## is every package in .Library either base or recommended?
 installed <- installed.packages() %>% as_tibble()
 
-installed[1:15,1:5] %>% pander()
+installed[1:15,1:4] %>% pander()
 
 
 all(list.files("/usr/lib/R/library") %in% installed$Package)
@@ -84,6 +84,7 @@ installed.packages(fields = c("URL")) %>%
   as_tibble() %>% 
   mutate(github = grepl("github", URL)) %>% 
   count(github) %>% 
-  mutate(Prop = n/sum(n))
+  mutate(Prop = n/sum(n)) %>% 
+  pander()
 
 devtools::session_info()

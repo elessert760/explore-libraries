@@ -1,7 +1,7 @@
 01\_explore-libraries\_spartan.R
 ================
 eric
-Wed Jan 31 14:30:45 2018
+Wed Jan 31 14:37:08 2018
 
 Which libraries does R search for packages? Installed packages
 
@@ -329,14 +329,14 @@ Going further
 ## is every package in .Library either base or recommended?
 installed <- installed.packages() %>% as_tibble()
 
-installed[1:15,1:5] %>% pander()
+installed[1:15,1:4] %>% pander()
 ```
 
-<table style="width:97%;">
-<caption>Table continues below</caption>
+<table>
 <colgroup>
-<col width="18%" />
-<col width="65%" />
+<col width="15%" />
+<col width="57%" />
+<col width="13%" />
 <col width="13%" />
 </colgroup>
 <thead>
@@ -344,6 +344,7 @@ installed[1:15,1:5] %>% pander()
 <th align="center">Package</th>
 <th align="center">LibPath</th>
 <th align="center">Version</th>
+<th align="center">Priority</th>
 </tr>
 </thead>
 <tbody>
@@ -351,150 +352,90 @@ installed[1:15,1:5] %>% pander()
 <td align="center">AlgDesign</td>
 <td align="center">/home/eric/R/x86_64-pc-linux-gnu-library/3.4</td>
 <td align="center">1.1-7.3</td>
+<td align="center">NA</td>
 </tr>
 <tr class="even">
 <td align="center">anytime</td>
 <td align="center">/home/eric/R/x86_64-pc-linux-gnu-library/3.4</td>
 <td align="center">0.3.0</td>
+<td align="center">NA</td>
 </tr>
 <tr class="odd">
 <td align="center">backports</td>
 <td align="center">/home/eric/R/x86_64-pc-linux-gnu-library/3.4</td>
 <td align="center">1.1.0</td>
+<td align="center">NA</td>
 </tr>
 <tr class="even">
 <td align="center">BH</td>
 <td align="center">/home/eric/R/x86_64-pc-linux-gnu-library/3.4</td>
 <td align="center">1.62.0-1</td>
+<td align="center">NA</td>
 </tr>
 <tr class="odd">
 <td align="center">bit</td>
 <td align="center">/home/eric/R/x86_64-pc-linux-gnu-library/3.4</td>
 <td align="center">1.1-12</td>
+<td align="center">NA</td>
 </tr>
 <tr class="even">
 <td align="center">bit64</td>
 <td align="center">/home/eric/R/x86_64-pc-linux-gnu-library/3.4</td>
 <td align="center">0.9-7</td>
+<td align="center">NA</td>
 </tr>
 <tr class="odd">
 <td align="center">blob</td>
 <td align="center">/home/eric/R/x86_64-pc-linux-gnu-library/3.4</td>
 <td align="center">1.1.0</td>
+<td align="center">NA</td>
 </tr>
 <tr class="even">
 <td align="center">brew</td>
 <td align="center">/home/eric/R/x86_64-pc-linux-gnu-library/3.4</td>
 <td align="center">1.0-6</td>
+<td align="center">NA</td>
 </tr>
 <tr class="odd">
 <td align="center">broom</td>
 <td align="center">/home/eric/R/x86_64-pc-linux-gnu-library/3.4</td>
 <td align="center">0.4.2</td>
+<td align="center">NA</td>
 </tr>
 <tr class="even">
 <td align="center">car</td>
 <td align="center">/home/eric/R/x86_64-pc-linux-gnu-library/3.4</td>
 <td align="center">2.1-5</td>
+<td align="center">NA</td>
 </tr>
 <tr class="odd">
 <td align="center">cellranger</td>
 <td align="center">/home/eric/R/x86_64-pc-linux-gnu-library/3.4</td>
 <td align="center">1.1.0</td>
+<td align="center">NA</td>
 </tr>
 <tr class="even">
 <td align="center">chron</td>
 <td align="center">/home/eric/R/x86_64-pc-linux-gnu-library/3.4</td>
 <td align="center">2.3-51</td>
+<td align="center">NA</td>
 </tr>
 <tr class="odd">
 <td align="center">cli</td>
 <td align="center">/home/eric/R/x86_64-pc-linux-gnu-library/3.4</td>
 <td align="center">1.0.0</td>
+<td align="center">NA</td>
 </tr>
 <tr class="even">
 <td align="center">clipr</td>
 <td align="center">/home/eric/R/x86_64-pc-linux-gnu-library/3.4</td>
 <td align="center">0.4.0</td>
+<td align="center">NA</td>
 </tr>
 <tr class="odd">
 <td align="center">clisymbols</td>
 <td align="center">/home/eric/R/x86_64-pc-linux-gnu-library/3.4</td>
 <td align="center">1.2.0</td>
-</tr>
-</tbody>
-</table>
-
-<table style="width:60%;">
-<colgroup>
-<col width="15%" />
-<col width="44%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="center">Priority</th>
-<th align="center">Depends</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center">NA</td>
-<td align="center">NA</td>
-</tr>
-<tr class="even">
-<td align="center">NA</td>
-<td align="center">R (&gt;= 3.2.0)</td>
-</tr>
-<tr class="odd">
-<td align="center">NA</td>
-<td align="center">R (&gt;= 3.0.0)</td>
-</tr>
-<tr class="even">
-<td align="center">NA</td>
-<td align="center">NA</td>
-</tr>
-<tr class="odd">
-<td align="center">NA</td>
-<td align="center">R (&gt;= 2.9.2)</td>
-</tr>
-<tr class="even">
-<td align="center">NA</td>
-<td align="center">R (&gt;= 3.0.1), bit (&gt;= 1.1-12), utils, methods, stats</td>
-</tr>
-<tr class="odd">
-<td align="center">NA</td>
-<td align="center">NA</td>
-</tr>
-<tr class="even">
-<td align="center">NA</td>
-<td align="center">NA</td>
-</tr>
-<tr class="odd">
-<td align="center">NA</td>
-<td align="center">NA</td>
-</tr>
-<tr class="even">
-<td align="center">NA</td>
-<td align="center">R (&gt;= 3.2.0)</td>
-</tr>
-<tr class="odd">
-<td align="center">NA</td>
-<td align="center">R (&gt;= 3.0.0)</td>
-</tr>
-<tr class="even">
-<td align="center">NA</td>
-<td align="center">R (&gt;= 2.12.0)</td>
-</tr>
-<tr class="odd">
-<td align="center">NA</td>
-<td align="center">R (&gt;= 2.10)</td>
-</tr>
-<tr class="even">
-<td align="center">NA</td>
-<td align="center">NA</td>
-</tr>
-<tr class="odd">
-<td align="center">NA</td>
 <td align="center">NA</td>
 </tr>
 </tbody>
@@ -522,14 +463,36 @@ installed.packages(fields = c("URL")) %>%
   as_tibble() %>% 
   mutate(github = grepl("github", URL)) %>% 
   count(github) %>% 
-  mutate(Prop = n/sum(n))
+  mutate(Prop = n/sum(n)) %>% 
+  pander()
 ```
 
-    ## # A tibble: 2 x 3
-    ##   github     n   Prop
-    ##    <lgl> <int>  <dbl>
-    ## 1  FALSE   194 0.4755
-    ## 2   TRUE   214 0.5245
+<table style="width:32%;">
+<colgroup>
+<col width="12%" />
+<col width="8%" />
+<col width="11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">github</th>
+<th align="center">n</th>
+<th align="center">Prop</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">FALSE</td>
+<td align="center">194</td>
+<td align="center">0.4755</td>
+</tr>
+<tr class="even">
+<td align="center">TRUE</td>
+<td align="center">214</td>
+<td align="center">0.5245</td>
+</tr>
+</tbody>
+</table>
 
 ``` r
 devtools::session_info()
