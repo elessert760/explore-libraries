@@ -87,7 +87,7 @@ installed.packages(fields = c("URL")) %>%
   mutate(Prop = n/sum(n)) %>% 
   pander()
 
-devtools::session_info()
+devtools::session_info()[[2]] %>% pander
 
 # ¯\_(ツ)_/¯
 

@@ -1,7 +1,7 @@
 01\_explore-libraries\_spartan.R
 ================
 eric
-Wed Jan 31 14:53:17 2018
+Wed Jan 31 15:58:36 2018
 
 Which libraries does R search for packages? Installed packages
 
@@ -495,88 +495,25 @@ installed.packages(fields = c("URL")) %>%
 </table>
 
 ``` r
-devtools::session_info()
+devtools::session_info() %>% map(pander)
 ```
 
-    ## Session info -------------------------------------------------------------
+    ## Warning in pander.default(.x[[i]], ...): No pander.method for
+    ## "platform_info", reverting to default.
 
-    ##  setting  value                       
-    ##  version  R version 3.4.3 (2017-11-30)
-    ##  system   x86_64, linux-gnu           
-    ##  ui       X11                         
-    ##  language en_US                       
-    ##  collate  en_US.UTF-8                 
-    ##  tz       US/Pacific                  
-    ##  date     2018-01-31
-
-    ## Packages -----------------------------------------------------------------
-
-    ##  package    * version    date       source                         
-    ##  assertthat   0.2.0      2017-04-11 CRAN (R 3.4.1)                 
-    ##  backports    1.1.0      2017-05-22 CRAN (R 3.4.1)                 
-    ##  base       * 3.4.3      2017-12-01 local                          
-    ##  bindr        0.1        2016-11-13 CRAN (R 3.4.1)                 
-    ##  bindrcpp   * 0.2        2017-06-17 CRAN (R 3.4.1)                 
-    ##  broom        0.4.2      2017-02-13 CRAN (R 3.4.0)                 
-    ##  cellranger   1.1.0      2016-07-27 CRAN (R 3.4.0)                 
-    ##  colorspace   1.3-2      2016-12-14 CRAN (R 3.4.0)                 
-    ##  compiler     3.4.3      2017-12-01 local                          
-    ##  datasets   * 3.4.3      2017-12-01 local                          
-    ##  devtools   * 1.13.3     2017-08-02 CRAN (R 3.4.1)                 
-    ##  digest       0.6.12     2017-01-27 cran (@0.6.12)                 
-    ##  dplyr      * 0.7.2      2017-07-20 CRAN (R 3.4.1)                 
-    ##  evaluate     0.10.1     2017-06-24 CRAN (R 3.4.1)                 
-    ##  forcats      0.2.0      2017-01-23 CRAN (R 3.4.0)                 
-    ##  foreign      0.8-69     2017-06-21 CRAN (R 3.4.0)                 
-    ##  ggplot2    * 2.2.1.9000 2017-05-02 Github (hadley/ggplot2@f4398b6)
-    ##  glue         1.1.1      2017-06-21 CRAN (R 3.4.1)                 
-    ##  graphics   * 3.4.3      2017-12-01 local                          
-    ##  grDevices  * 3.4.3      2017-12-01 local                          
-    ##  grid         3.4.3      2017-12-01 local                          
-    ##  gtable       0.2.0      2016-02-26 CRAN (R 3.4.0)                 
-    ##  haven        1.1.0      2017-07-09 CRAN (R 3.4.1)                 
-    ##  hms          0.3        2016-11-22 CRAN (R 3.4.0)                 
-    ##  htmltools    0.3.6      2017-04-28 cran (@0.3.6)                  
-    ##  httr         1.3.1      2017-08-20 CRAN (R 3.4.2)                 
-    ##  jsonlite     1.5        2017-06-01 CRAN (R 3.4.1)                 
-    ##  knitr        1.17       2017-08-10 CRAN (R 3.4.1)                 
-    ##  lattice      0.20-35    2017-03-25 CRAN (R 3.3.3)                 
-    ##  lazyeval     0.2.0      2016-06-12 CRAN (R 3.3.2)                 
-    ##  lubridate    1.6.0      2016-09-13 CRAN (R 3.4.0)                 
-    ##  magrittr   * 1.5        2014-11-22 CRAN (R 3.4.0)                 
-    ##  memoise      1.1.0      2017-04-21 CRAN (R 3.4.0)                 
-    ##  methods    * 3.4.3      2017-12-01 local                          
-    ##  mnormt       1.5-5      2016-10-15 CRAN (R 3.4.0)                 
-    ##  modelr       0.1.1      2017-07-24 CRAN (R 3.4.1)                 
-    ##  munsell      0.4.3      2016-02-13 CRAN (R 3.4.0)                 
-    ##  nlme         3.1-131    2017-02-06 CRAN (R 3.4.0)                 
-    ##  pander     * 0.6.1      2017-08-06 CRAN (R 3.4.3)                 
-    ##  parallel     3.4.3      2017-12-01 local                          
-    ##  pkgconfig    2.0.1      2017-03-21 CRAN (R 3.4.1)                 
-    ##  plyr         1.8.4      2016-06-08 CRAN (R 3.4.0)                 
-    ##  psych        1.7.5      2017-05-03 CRAN (R 3.4.0)                 
-    ##  purrr      * 0.2.3      2017-08-02 CRAN (R 3.4.1)                 
-    ##  R6           2.2.2      2017-06-17 CRAN (R 3.4.1)                 
-    ##  Rcpp         0.12.12    2017-07-15 CRAN (R 3.4.1)                 
-    ##  readr      * 1.1.1      2017-05-16 CRAN (R 3.4.0)                 
-    ##  readxl       1.0.0      2017-04-18 CRAN (R 3.4.0)                 
-    ##  reshape2     1.4.2      2016-10-22 CRAN (R 3.4.0)                 
-    ##  rlang        0.1.2      2017-08-09 CRAN (R 3.4.1)                 
-    ##  rmarkdown    1.6        2017-06-15 CRAN (R 3.4.1)                 
-    ##  rprojroot    1.2        2017-01-16 CRAN (R 3.4.0)                 
-    ##  rvest        0.3.2      2016-06-17 CRAN (R 3.4.0)                 
-    ##  scales       0.4.1      2016-11-09 CRAN (R 3.4.0)                 
-    ##  stats      * 3.4.3      2017-12-01 local                          
-    ##  stringi      1.1.5      2017-04-07 CRAN (R 3.4.1)                 
-    ##  stringr      1.2.0      2017-02-18 CRAN (R 3.4.1)                 
-    ##  tibble     * 1.3.4      2017-08-22 CRAN (R 3.4.1)                 
-    ##  tidyr      * 0.7.0      2017-08-16 CRAN (R 3.4.1)                 
-    ##  tidyverse  * 1.1.1      2017-01-27 CRAN (R 3.4.0)                 
-    ##  tools        3.4.3      2017-12-01 local                          
-    ##  utils      * 3.4.3      2017-12-01 local                          
-    ##  withr        2.0.0      2017-07-28 CRAN (R 3.4.1)                 
-    ##  xml2         1.1.1      2017-01-24 CRAN (R 3.4.0)                 
-    ##  yaml         2.1.14     2016-11-12 CRAN (R 3.4.1)
+    ## $platform
+    ## [1] "\n\n  * **version**: R version 3.4.3 (2017-11-30)\n  * **system**: x86_64, linux-gnu\n  * **ui**: X11\n  * **language**: en_US\n  * **collate**: en_US.UTF-8\n  * **tz**: US/Pacific\n  * **date**: 2018-01-31\n\n<!-- end of list -->\n\n\n"
+    ## attr(,"class")
+    ## [1] "knit_asis"
+    ## attr(,"knit_cacheable")
+    ## [1] NA
+    ## 
+    ## $packages
+    ## [1] "\n---------------------------------------------------------------------\n  package     *    version        date               source          \n------------ --- ------------ ------------ --------------------------\n assertthat         0.2.0      2017-04-11        CRAN (R 3.4.1)      \n\n backports          1.1.0      2017-05-22        CRAN (R 3.4.1)      \n\n    base      *     3.4.3      2017-12-01            local           \n\n   bindr             0.1       2016-11-13        CRAN (R 3.4.1)      \n\n  bindrcpp    *      0.2       2017-06-17        CRAN (R 3.4.1)      \n\n   broom            0.4.2      2017-02-13        CRAN (R 3.4.0)      \n\n cellranger         1.1.0      2016-07-27        CRAN (R 3.4.0)      \n\n colorspace         1.3-2      2016-12-14        CRAN (R 3.4.0)      \n\n  compiler          3.4.3      2017-12-01            local           \n\n  datasets    *     3.4.3      2017-12-01            local           \n\n  devtools    *     1.13.3     2017-08-02        CRAN (R 3.4.1)      \n\n   digest           0.6.12     2017-01-27        cran (@0.6.12)      \n\n   dplyr      *     0.7.2      2017-07-20        CRAN (R 3.4.1)      \n\n  evaluate          0.10.1     2017-06-24        CRAN (R 3.4.1)      \n\n  forcats           0.2.0      2017-01-23        CRAN (R 3.4.0)      \n\n  foreign           0.8-69     2017-06-21        CRAN (R 3.4.0)      \n\n  ggplot2     *   2.2.1.9000   2017-05-02            Github          \n                                            (hadley/ggplot2@f4398b6) \n\n    glue            1.1.1      2017-06-21        CRAN (R 3.4.1)      \n\n  graphics    *     3.4.3      2017-12-01            local           \n\n grDevices    *     3.4.3      2017-12-01            local           \n\n    grid            3.4.3      2017-12-01            local           \n\n   gtable           0.2.0      2016-02-26        CRAN (R 3.4.0)      \n\n   haven            1.1.0      2017-07-09        CRAN (R 3.4.1)      \n\n    hms              0.3       2016-11-22        CRAN (R 3.4.0)      \n\n htmltools          0.3.6      2017-04-28        cran (@0.3.6)       \n\n    httr            1.3.1      2017-08-20        CRAN (R 3.4.2)      \n\n  jsonlite           1.5       2017-06-01        CRAN (R 3.4.1)      \n\n   knitr             1.17      2017-08-10        CRAN (R 3.4.1)      \n\n  lattice          0.20-35     2017-03-25        CRAN (R 3.3.3)      \n\n  lazyeval          0.2.0      2016-06-12        CRAN (R 3.3.2)      \n\n lubridate          1.6.0      2016-09-13        CRAN (R 3.4.0)      \n\n  magrittr    *      1.5       2014-11-22        CRAN (R 3.4.0)      \n\n  memoise           1.1.0      2017-04-21        CRAN (R 3.4.0)      \n\n  methods     *     3.4.3      2017-12-01            local           \n\n   mnormt           1.5-5      2016-10-15        CRAN (R 3.4.0)      \n\n   modelr           0.1.1      2017-07-24        CRAN (R 3.4.1)      \n\n  munsell           0.4.3      2016-02-13        CRAN (R 3.4.0)      \n\n    nlme           3.1-131     2017-02-06        CRAN (R 3.4.0)      \n\n   pander     *     0.6.1      2017-08-06        CRAN (R 3.4.3)      \n\n  parallel          3.4.3      2017-12-01            local           \n\n pkgconfig          2.0.1      2017-03-21        CRAN (R 3.4.1)      \n\n    plyr            1.8.4      2016-06-08        CRAN (R 3.4.0)      \n\n   psych            1.7.5      2017-05-03        CRAN (R 3.4.0)      \n\n   purrr      *     0.2.3      2017-08-02        CRAN (R 3.4.1)      \n\n     R6             2.2.2      2017-06-17        CRAN (R 3.4.1)      \n\n    Rcpp           0.12.12     2017-07-15        CRAN (R 3.4.1)      \n\n   readr      *     1.1.1      2017-05-16        CRAN (R 3.4.0)      \n\n   readxl           1.0.0      2017-04-18        CRAN (R 3.4.0)      \n\n  reshape2          1.4.2      2016-10-22        CRAN (R 3.4.0)      \n\n   rlang            0.1.2      2017-08-09        CRAN (R 3.4.1)      \n\n rmarkdown           1.6       2017-06-15        CRAN (R 3.4.1)      \n\n rprojroot           1.2       2017-01-16        CRAN (R 3.4.0)      \n\n   rvest            0.3.2      2016-06-17        CRAN (R 3.4.0)      \n\n   scales           0.4.1      2016-11-09        CRAN (R 3.4.0)      \n\n   stats      *     3.4.3      2017-12-01            local           \n\n  stringi           1.1.5      2017-04-07        CRAN (R 3.4.1)      \n\n  stringr           1.2.0      2017-02-18        CRAN (R 3.4.1)      \n\n   tibble     *     1.3.4      2017-08-22        CRAN (R 3.4.1)      \n\n   tidyr      *     0.7.0      2017-08-16        CRAN (R 3.4.1)      \n\n tidyverse    *     1.1.1      2017-01-27        CRAN (R 3.4.0)      \n\n   tools            3.4.3      2017-12-01            local           \n\n   utils      *     3.4.3      2017-12-01            local           \n\n   withr            2.0.0      2017-07-28        CRAN (R 3.4.1)      \n\n    xml2            1.1.1      2017-01-24        CRAN (R 3.4.0)      \n\n    yaml            2.1.14     2016-11-12        CRAN (R 3.4.1)      \n---------------------------------------------------------------------\n\n"
+    ## attr(,"class")
+    ## [1] "knit_asis"
+    ## attr(,"knit_cacheable")
+    ## [1] NA
 
 ``` r
 # ¯\_(ツ)_/¯
